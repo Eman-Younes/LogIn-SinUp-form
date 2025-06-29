@@ -1,0 +1,485 @@
+/* base code */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'UoqMunThenKhung', sans-serif;
+}
+
+body {
+    background-color: #F6F5F7;
+    width: 100%;
+}
+
+/* container layout */
+.logIn_container {
+    width: 60%;
+    min-height: 30rem;
+    margin-left: 22rem;
+    margin-top: 15rem;
+    background: linear-gradient(to right, #feb4c7, #fe7799, #fe0849 50%, #ffffff 50%);
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #0003;
+}
+
+.signUp_container {
+    width: 60%;
+    min-height: 30rem;
+    margin-left: 22rem;
+    margin-top: 15rem;
+    background: linear-gradient(to left, #feb4c7, #fe7799, #fe0849 50%, #ffffff 50%);
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #0003;
+}
+
+.logIn_form,
+.signUp_form {
+    width: 25%;
+    margin: 10rem;
+}
+/*animation */
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+.title1 h1,.title2 h1{
+    opacity: 0;
+    animation: none;
+    display: inline;
+    word-spacing: 0.5em;
+}
+.title1 .word, .title2 .word{
+    opacity: 0;
+    animation: fadeIn 0.6s ease-in-out forwards;
+    display: inline-block;
+}
+.title1 .word:nth-child(1), .title2 .word:nth-child(1){
+    animation-delay: 0.1s;
+}
+.title1 .word:nth-child(2),.title2 .word:nth-child(2){
+    animation-delay: 0.2s;
+}
+/* typography */
+.title1 {
+    color: #F6F5F7;
+    font-size: 2.2vw;
+    padding: 5px;
+}
+
+.title2 {
+    color: #fe7799;
+    font-size: 2.2vw;
+    padding: 5px;
+}
+
+p {
+    font-size: 1.25vw;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    transform: scaleX(1.1);
+    cursor: pointer;
+    color: #3e3d3d;
+}
+
+.social_link a {
+    font-size: 1.4vw;
+    color: #F6F5F7;
+    text-decoration: none;
+}
+
+input {
+    width: 17vw;
+    min-height: 1.5vw;
+    border: none;
+    background-color: #F6F5F7;
+    border-radius: 10px;
+    margin: 7px;
+    padding: 0.75rem;
+}
+
+/* buttons */
+.forget {
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.signUp_btn {
+    display: block;
+    width: 75%;
+    min-height: 2.8rem;
+    border: none;
+    border-radius: 25px;
+    border: 3px solid #fe7799;
+    background-color: #ffffff;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+}
+
+.signUp_btn a {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.signUp_btn:hover {
+    background-color: #fe7799;
+    transform: translateX(1.1);
+    cursor: pointer;
+}
+
+.logIn_btn {
+    display: block;
+    width: 65%;
+    min-height: 2.8rem;
+    border: none;
+    border-radius: 25px;
+    margin: 15px;
+    font-size: 1.3rem;
+    background-color: #ffffff;
+    border: none;
+    color: #fe7799;
+    transition: all 0.3s ease;
+}
+
+.logIn_btn:hover {
+    transform: translateX(1.1);
+    background-color: #fe7799;
+    color: black;
+    border: 3px solid #ffffff;
+    cursor: pointer;
+}
+
+/* responsive code */
+@media (max-width: 1280px) {
+    .logIn_container,
+    .signUp_container {
+        align-self: center;
+        margin-left: 15rem;
+        margin-top: 12rem;
+    }
+    
+    .logIn_form,
+    .signUp_form {
+        width: 30%;
+        margin: 4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .logIn_container,
+    .signUp_container {
+        margin-top: 5rem;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: unset;
+        border-radius: 18px;
+    }
+    
+    .logIn_form,
+    .signUp_form {
+        width: 50%;
+        margin: 3rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: unset;
+    }
+    
+    .title1, .title2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        padding: 10px 0 20px 0;
+        text-align: center;
+    }
+    
+    p {
+        font-size: 1.1rem;
+        padding: 8px 0;
+        text-align: center;
+    }
+    
+    a {
+        font-size: 1rem;
+    }
+    
+    .social_link {
+        margin-bottom: 1.5rem;
+    }
+    .social_link a {
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+    }
+    input {
+        width: 90%;
+        min-height: 2.2rem;
+        font-size: 1rem;
+        margin: 10px 0;
+        padding: 0.7rem 1rem;
+    }
+    .forget {
+        font-size: 1rem;
+        padding: 8px 0;
+        text-align: left;
+        width: 90%;
+    }
+    .signUp_btn, .logIn_btn {
+        width: 90%;
+        min-height: 2.5rem;
+        font-size: 1.1rem;
+        margin: 18px 0 0 0;
+    }
+    .signUp_btn a {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 980px) {
+    .logIn_container,
+    .signUp_container {
+        align-self: center;
+        width: 70%;
+        margin-left: 10rem;
+        margin-top: 26rem;
+    }
+    
+    .logIn_form,
+    .signUp_form {
+        margin: 3rem;
+    }
+    
+    .title1 {
+        color: #F6F5F7;
+        font-size: 3.5vw;
+        padding: 5px;
+    }
+    
+    .title2 {
+        color: #fe7799;
+        font-size: 3.5vw;
+        padding: 5px;
+    }
+    
+    p {
+        font-size: 2.4vw;
+        padding: 5px;
+    }
+    
+    a {
+        font-size: 1.4vw;
+        text-decoration: none;
+        color: black;
+        transition: all 0.3s ease;
+    }
+    
+    a:hover {
+        transform: scaleX(1.1);
+        cursor: pointer;
+        color: #3e3d3d;
+    }
+    
+    .social_link a {
+        font-size: 2.5vw;
+        color: #F6F5F7;
+        text-decoration: none;
+    }
+    
+    input {
+        width: 27vw;
+        min-height: 2vw;
+        border: none;
+        background-color: #F6F5F7;
+        border-radius: 5px;
+        margin: 7px;
+    }
+}
+
+@media (max-width: 580px) {
+    .logIn_container,
+    .signUp_container {
+        align-self: center;
+        width: 90%;
+        margin-left: 4rem;
+        margin-right: 5rem;
+        margin-top: 4rem;
+    }
+    
+    .logIn_form,
+    .signUp_form {
+        width: 45%;
+        margin: 2rem;
+    }
+    
+    .title1 {
+        color: #F6F5F7;
+        font-size: 3.8vw;
+        padding: 5px;
+    }
+    
+    .title2 {
+        color: #fe7799;
+        font-size: 3.8vw;
+        padding: 5px;
+    }
+    
+    p {
+        font-size: 2.6vw;
+        padding: 5px;
+    }
+    
+    a {
+        font-size: 1.8vw;
+        text-decoration: none;
+        color: black;
+        transition: all 0.3s ease;
+    }
+    
+    a:hover {
+        transform: scaleX(1.1);
+        cursor: pointer;
+        color: #3e3d3d;
+    }
+    
+    .social_link a {
+        font-size: 2.3vw;
+        color: #F6F5F7;
+        text-decoration: none;
+    }
+    
+    input {
+        width: 24vw;
+        min-height: 2vw;
+        border: none;
+        background-color: #F6F5F7;
+        border-radius: 5px;
+        margin: 7px;
+    }
+}
+
+@media (max-width: 450px) {
+    .logIn_container,
+    .signUp_container {
+        align-self: center;
+        width: 90%;
+        margin-left: 1rem;
+        margin-top: 6rem;
+    }
+    
+    .logIn_form,
+    .signUp_form {
+        width: 50%;
+    }
+    
+    input {
+        width: 90%;
+    }
+    
+    .title1 {
+        color: #F6F5F7;
+        font-size: 6vw;
+        padding: 5px;
+    }
+    
+    .title2 {
+        color: #fe7799;
+        font-size: 6vw;
+        padding: 5px;
+    }
+    
+    p {
+        font-size: 4vw;
+        padding: 5px;
+    }
+    
+    a {
+        font-size: 3vw;
+        text-decoration: none;
+        color: black;
+        transition: all 0.3s ease;
+    }
+    
+    a:hover {
+        transform: scaleX(1.1);
+        cursor: pointer;
+        color: #3e3d3d;
+    }
+    
+    .social_link a {
+        font-size: 4vw;
+        color: #F6F5F7;
+        text-decoration: none;
+    }
+    
+    input {
+        width: 27vw;
+        min-height: 2vw;
+        border: none;
+        background-color: #F6F5F7;
+        border-radius: 5px;
+        margin: 7px;
+    }
+    
+    .forget {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    
+    .signUp_btn {
+        display: block;
+        width: 95%;
+        min-height: 2rem;
+        border: none;
+        border-radius: 25px;
+        border: 3px solid #fe7799;
+        background-color: #ffffff;
+        margin-top: 2rem;
+        transition: all 0.3s ease;
+    }
+    
+    .signUp_btn a {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    
+    .signUp_btn:hover {
+        background-color: #fe7799;
+        transform: translateX(1.1);
+        cursor: pointer;
+    }
+    
+    .logIn_btn {
+        display: block;
+        width: 77%;
+        min-height: 2rem;
+        border: none;
+        border-radius: 25px;
+        font-size: 0.8rem;
+        background-color: #ffffff;
+        border: none;
+        color: #fe7799;
+        transition: all 0.3s ease;
+        align-self: center;
+    }
+    
+    .logIn_btn:hover {
+        transform: translateX(1.1);
+        background-color: #fe7799;
+        color: black;
+        border: 3px solid #ffffff;
+        cursor: pointer;
+    }
+}
+
+
+
+
+

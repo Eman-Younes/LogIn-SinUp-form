@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=UoqMunThenKhung&display=swap');
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <!--login form-->
+    <section class="logIn_container"> <!--login container-->
+        <div class="logIn_form"> <!--left side:login form -->
+            <h1 class="title1">
+                 <span class="word">Sign</span>
+                 <span class="word">In</span>
+                </h1>
+            <div class="social_link">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-solid fa-envelope"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <br>
+            <form action="login_form"> 
+                <!--email input-->
+                <label for="email"></label>
+                <input type="email" required placeholder="Email">
+                <br> <br>
+                <!--password input-->
+                <label for="password"></label>
+                <input type="password" required placeholder="Password">
+                <br><br>
+                <p class="forget"><a>Forget your password?</a></p>
+                <br><br>
+                <button class="logIn_btn">sign in</button>
+            </form>
+        </div>
+        <div class="logIn_form"> <!--right side: welcome panel-->
+            <h1 class="title2">
+                <span class="word">Hello,</span>
+                <span class="word">Friend!</span>
+            </h1>
+            <br>
+            <p>Enter your personal details and start journey with us</p>
+            <br><br>
+            <button class="signUp_btn "> <a href="signUp.html">sign up</a></button> <!--to go to the sign up page-->
+        </div>
+    </section>
+</body>
+</html>
